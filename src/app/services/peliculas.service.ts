@@ -5,6 +5,7 @@ import { Observable, of } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
 
 import { CarteleraResponse, Movie } from '../interfaces/cartelera-response';
+import { MovieDetails } from '../interfaces/movie-response';
 
 @Injectable({
   providedIn: 'root'
@@ -56,5 +57,11 @@ export class PeliculasService {
     }).pipe(
        map( resp => resp.results )
     )
+  }
+
+  getPeliculaDetalles(id:string){
+    return this.http.get<MovieDetails>(`${this.baseUrl}/movie/${id}`, {
+      params : this.params
+    });
   }
 }

@@ -22,7 +22,6 @@ export class HomeComponent implements OnInit, OnDestroy{
         this.movies.push(...movies);
       });
     }
-    console.log({pos, max});
   }
 
   constructor( private peliculasService: PeliculasService ) { }
@@ -31,7 +30,6 @@ export class HomeComponent implements OnInit, OnDestroy{
 
     this.peliculasService.getCartelera()
         .subscribe( movies=>{
-          console.log(movies);
           this.movies = movies;
           this.moviesSilideshow = movies;
         })
