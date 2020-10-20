@@ -13,7 +13,7 @@ import { Cast } from '../../interfaces/credist-response'
 export class PeliculaComponent implements OnInit {
 
   public pelicula: MovieDetails;
-  public cast: Cast[];
+  public cast: Cast[] = [];
   constructor( private activatedRoute: ActivatedRoute,
                private peliculasService: PeliculasService,
                private location: Location,

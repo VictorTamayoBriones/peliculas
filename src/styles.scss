@@ -34,3 +34,20 @@ hr{
 .block {
     display:block;
 }
+
+.swiper-container{
+    width:100% !important;
+    margin: auto;
+    .swiper-wrapper{
+        width: 90%;
+        margin:auto;
+        .swiper-slide{
+            width: 20%;
+            margin:auto;
+            margin-right: 15px;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
