@@ -21,7 +21,8 @@ export class CastSlideshowComponent implements OnInit, AfterViewInit {
     const swiper = new Swiper('.swiper-container',{
       slidesPerView: 5.3,
       freeMode: true,
-      spaceBetween: 15
+      spaceBetween: 15,
+      loop: true
     });
   }
 
